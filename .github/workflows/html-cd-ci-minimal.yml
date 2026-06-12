@@ -64,7 +64,7 @@ jobs:
     # 🛡️ SÉCURITÉ : Attend impérativement la réussite de la Qualité ET de la Perf
     needs: [quality-check, perf-audit]
     # 🎯 FILTRE : Uniquement si on est sur la branche 'test'
-    if: .github.event_name == 'push' && .github.ref == 'refs/heads/test'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/test'
     permissions:
       contents: write
     steps:
@@ -83,11 +83,11 @@ jobs:
     # 🛡️ SÉCURITÉ : Attend aussi la réussite de la Qualité ET de la Perf
     needs: [quality-check, perf-audit]
     # 🎯 FILTRE : Uniquement si on est sur 'main' ou 'master'
-    if: .github.event_name == 'push' && (.github.ref == 'refs/heads/main' || .github.ref == 'refs/heads/master')
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     steps:
       - uses: actions/checkout@v4
-      - name: Nettoyage des dossiers de développement (.git, ..github)
-        run: rm -rf .git ..github .idea node_modules *.json .* eslint* package* light*
+      - name: Nettoyage des dossiers de développement (git, .sgithub)
+        run: rm -rf git .github .idea node_modules *.json .* eslint* package* light*
       - name: Déploiement Production SFTP Sovereign
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Villa Laurie - Villa de charme à Sète, face à la mer</title>
+    <meta name="description" content="Maison de vacances d'exception sur les hauteurs de Sète. Piscine avec vue panoramique sur la mer, 3 chambres, grand espace de vie. Location saisonnière.">
+    <meta property="og:title" content="La Villa Laurie - Villa de charme à Sète">
+    <meta property="og:description" content="Piscine vue mer, 3 chambres, séjour ouvert. Une adresse d'exception sur les hauteurs de Sète.">
+    <meta property="og:image" content="img/LaVillaLaurie-piscine0.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================
+     navigation
+     ============================ -->
+<nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">La Villa Laurie</a>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">
+            <span lang="fr">Accueil</span>
+            <span lang="en">Home</span>
+        </a></li>
+        <li><a href="prestations.html">
+            <span lang="fr">Prestations</span>
+            <span lang="en">Experiences</span>
+        </a></li>
+        <li><a href="contact.html">
+            <span lang="fr">Contact</span>
+            <span lang="en">Contact</span>
+        </a></li>
+        <li>
+            <a href="contact.html" rel="noopener" class="btn btn-sm btn-gold">
+                <span lang="fr">Réserver</span>
+                <span lang="en">Book now</span>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+        </li>
+        <li>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLang('fr')" id="btnFr">FR</button>
+                <button class="lang-btn" onclick="setLang('en')" id="btnEn">EN</button>
+            </div>
+        </li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
